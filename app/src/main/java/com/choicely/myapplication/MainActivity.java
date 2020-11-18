@@ -32,47 +32,38 @@ public class MainActivity extends FragmentActivity {
                 .add(R.id.fragment_container, fragment)
                 .commit();
 
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FirstFragment fragment = new FirstFragment();
+        button1.setOnClickListener(v -> {
+            FirstFragment fragment1 = new FirstFragment();
 
-                fragment.setArguments(getIntent().getExtras());
+            fragment1.setArguments(getIntent().getExtras());
 
-                getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.fragment_container, fragment)
-                        .commit();
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, fragment1)
+                    .commit();
 
-            }
         });
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SecondFragment fragment = new SecondFragment();
+        button2.setOnClickListener(v -> {
+            SecondFragment fragment12 = new SecondFragment();
 
-                fragment.setArguments(getIntent().getExtras());
+            fragment12.setArguments(getIntent().getExtras());
 
-                getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.fragment_container, fragment)
-                        .commit();
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, fragment12)
+                    .commit();
 
-            }
         });
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ThirdFragment fragment = new ThirdFragment();
+        button3.setOnClickListener(v -> {
+            ThirdFragment fragment13 = new ThirdFragment();
 
-                fragment.setArguments(getIntent().getExtras());
+            fragment13.setArguments(getIntent().getExtras());
 
-                getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.fragment_container, fragment)
-                        .commit();
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, fragment13)
+                    .commit();
 
-            }
         });
 
     }
