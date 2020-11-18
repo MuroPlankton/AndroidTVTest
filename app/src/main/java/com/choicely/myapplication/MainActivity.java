@@ -5,15 +5,31 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 
 public class MainActivity extends FragmentActivity {
     private Button button1;
     private Button button2;
     private Button button3;
+
+    private View.OnClickListener onClickListener = v -> {
+        switch (v.getId()) {
+            case R.id.main_activity_fragment_button_1:
+                System.out.println("Fragment 1");
+                createFragment(new FirstFragment());
+                break;
+            case R.id.main_activity_fragment_button_2:
+                System.out.println("FRAGMENT 2");
+                createFragment(new SecondFragment());
+                break;
+            case R.id.main_activity_fragment_button_3:
+                System.out.println("Fragment 3");
+                createFragment(new ThirdFragment());
+                break;
+        }
+    };
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,6 +40,9 @@ public class MainActivity extends FragmentActivity {
         button2 = findViewById(R.id.main_activity_fragment_button_2);
         button3 = findViewById(R.id.main_activity_fragment_button_3);
 
+        button1.setOnClickListener(onClickListener);
+        button2.setOnClickListener(onClickListener);
+        button3.setOnClickListener(onClickListener);
 //        FragmentManager manager = getSupportFragmentManager();
 //        FragmentTransaction transaction = manager.beginTransaction();
 //
@@ -33,7 +52,46 @@ public class MainActivity extends FragmentActivity {
 //        transaction.replace(R.id.fragment_container, fragmentTwo);
 //        transaction.commit();
 
-        FirstFragment fragment = new FirstFragment();
+
+
+//        button1.setOnClickListener(v -> {
+//            FirstFragment fragment1 = new FirstFragment();
+//
+//            fragment1.setArguments(getIntent().getExtras());
+//
+//            getSupportFragmentManager()
+//                    .beginTransaction()
+//                    .replace(R.id.fragment_container, fragment1)
+//                    .commit();
+//
+//        });
+//        button2.setOnClickListener(v -> {
+//            SecondFragment fragment12 = new SecondFragment();
+//
+//            fragment12.setArguments(getIntent().getExtras());
+//
+//            getSupportFragmentManager()
+//                    .beginTransaction()
+//                    .replace(R.id.fragment_container, fragment12)
+//                    .commit();
+//
+//        });
+//        button3.setOnClickListener(v -> {
+//            ThirdFragment fragment13 = new ThirdFragment();
+//
+//            fragment13.setArguments(getIntent().getExtras());
+//
+//            getSupportFragmentManager()
+//                    .beginTransaction()
+//                    .replace(R.id.fragment_container, fragment13)
+//                    .commit();
+//
+//        });
+    }
+
+
+
+    public void createFragment(Fragment fragment){
 
         fragment.setArguments(getIntent().getExtras());
 
@@ -42,38 +100,6 @@ public class MainActivity extends FragmentActivity {
                 .replace(R.id.fragment_container, fragment)
                 .commit();
 
-        button1.setOnClickListener(v -> {
-            FirstFragment fragment1 = new FirstFragment();
-
-            fragment1.setArguments(getIntent().getExtras());
-
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragment_container, fragment1)
-                    .commit();
-
-        });
-        button2.setOnClickListener(v -> {
-            SecondFragment fragment12 = new SecondFragment();
-
-            fragment12.setArguments(getIntent().getExtras());
-
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragment_container, fragment12)
-                    .commit();
-
-        });
-        button3.setOnClickListener(v -> {
-            ThirdFragment fragment13 = new ThirdFragment();
-
-            fragment13.setArguments(getIntent().getExtras());
-
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragment_container, fragment13)
-                    .commit();
-
-        });
     }
+
 }
