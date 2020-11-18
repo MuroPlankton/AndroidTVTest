@@ -17,9 +17,11 @@
     <EditText
         android:id="@+id/third_fragment_edit_text"
         android:layout_width="600dp"
+        android:maxLines="1"
         android:layout_height="wrap_content"
         android:layout_below="@+id/third_fragment_button_1"
         android:layout_centerHorizontal="true"
+        android:hint="text"
         />
 
     <LinearLayout
