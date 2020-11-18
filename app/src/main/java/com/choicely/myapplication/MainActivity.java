@@ -6,6 +6,8 @@ import android.widget.Button;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 
 public class MainActivity extends FragmentActivity {
@@ -22,6 +24,14 @@ public class MainActivity extends FragmentActivity {
         button2 = findViewById(R.id.main_activity_fragment_button_2);
         button3 = findViewById(R.id.main_activity_fragment_button_3);
 
+//        FragmentManager manager = getSupportFragmentManager();
+//        FragmentTransaction transaction = manager.beginTransaction();
+//
+//        FragmentTwo fragmentTwo = new FragmentTwo();
+//
+////        transaction.add(R.id.fragment_container, fragmentTwo);
+//        transaction.replace(R.id.fragment_container, fragmentTwo);
+//        transaction.commit();
 
         FirstFragment fragment = new FirstFragment();
 
@@ -29,7 +39,7 @@ public class MainActivity extends FragmentActivity {
 
         getSupportFragmentManager()
                 .beginTransaction()
-                .add(R.id.fragment_container, fragment)
+                .replace(R.id.fragment_container, fragment)
                 .commit();
 
         button1.setOnClickListener(v -> {
@@ -65,6 +75,5 @@ public class MainActivity extends FragmentActivity {
                     .commit();
 
         });
-
     }
 }
