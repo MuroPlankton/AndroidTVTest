@@ -7,18 +7,44 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.choicely.myapplication"
+        applicationId "com.choicely.tv.test"
         minSdkVersion 24
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
     }
+    signingConfigs {
+        debug {
+            storeFile file("../info/choicely_test.jks")
+            storePassword "ccff0cffb0993ec67cd866a9cdce4004d3c04cd095cf028"
+            keyAlias "Choicely"
+            keyPassword "4ff178f7bb2f7d1f0d98f1cd389b29c43e3db4633f92784"
+        }
+        release {
+            storeFile file("../info/choicely_test.jks")
+            storePassword "ccff0cffb0993ec67cd866a9cdce4004d3c04cd095cf028"
+            keyAlias "Choicely"
+            keyPassword "4ff178f7bb2f7d1f0d98f1cd389b29c43e3db4633f92784"
+        }
+    }
 
     buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        buildTypes {
+            debug {
+                debuggable true
+                minifyEnabled false
+                shrinkResources false
+                testCoverageEnabled true
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                versionNameSuffix "a"
+            }
+            release {
+                debuggable false
+                minifyEnabled true
+                shrinkResources true
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
         }
     }
 }

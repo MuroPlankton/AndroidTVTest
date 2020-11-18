@@ -1,0 +1,31 @@
+Choicely test keystore info
+
+password: 			ccff0cffb0993ec67cd866a9cdce4004d3c04cd095cf028
+				
+
+Alias: 				Choicely
+password: 			4ff178f7bb2f7d1f0d98f1cd389b29c43e3db4633f92784
+First and Last Name: 			
+Organizational Unit:			
+Organization: 			Choicely
+City or location: 		
+State or Province		
+Country Code			FI
+
+
+keytool -exportcert -alias "choicely" -keystore choicely_test.jks -list -v
+-----------------------------------
+
+-----------------------------------
+
+keytool -exportcert -alias "choicely" -keystore choicely_test.jks | openssl sha1 -binary | openssl base64
+-----------------------------------
+
+-----------------------------------
+
+keytool -exportcert -alias androiddebugkey -keystore debug.keystore | openssl sha1 -binary | openssl base64
+-----------------------------------
+
+-----------------------------------
+
+
