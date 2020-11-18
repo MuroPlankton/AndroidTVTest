@@ -10,10 +10,13 @@ import androidx.fragment.app.Fragment;
 
 public class SecondFragment extends Fragment {
 
+    private View view;
+
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
-                             Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.second_fragment, container, false);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+
+        view = inflater.inflate(R.layout.second_fragment, container, false);
+        return view;
     }
 }
