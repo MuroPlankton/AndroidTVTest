@@ -5,4 +5,12 @@
     android:layout_height="match_parent"
     >
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This is the first fragment"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        />
+
 </LinearLayout>
