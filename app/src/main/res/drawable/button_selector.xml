@@ -3,6 +3,7 @@
 
     <item android:state_focused="true"
         android:color="#CCBDBD"
+        
 
         /> <!-- pressed -->
     <item android:state_hovered="false"
