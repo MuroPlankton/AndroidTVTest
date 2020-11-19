@@ -1,6 +1,7 @@
 package com.choicely.myapplication;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -10,29 +11,33 @@ import androidx.fragment.app.FragmentActivity;
 
 
 public class MainActivity extends FragmentActivity {
+    private static final String TAG = "MainActivity";
     private Button button1;
     private Button button2;
     private Button button3;
 
     private View.OnClickListener onClickListener = v -> {
+        Fragment fragment;
         switch (v.getId()) {
+            default:
             case R.id.main_activity_fragment_button_1:
-                System.out.println("Fragment 1");
-                createFragment(new FirstFragment());
+                Log.d(TAG, "Fragment 1");
+                fragment = new FirstFragment();
                 break;
             case R.id.main_activity_fragment_button_2:
-                System.out.println("FRAGMENT 2");
-                createFragment(new SecondFragment());
+                Log.d(TAG, "Fragment 2");
+                fragment = new SecondFragment();
                 button1.setEnabled(false);
                 button3.setEnabled(false);
                 break;
             case R.id.main_activity_fragment_button_3:
-                System.out.println("Fragment 3");
-                createFragment(new ThirdFragment());
+                Log.d(TAG, "Fragment 3");
+                fragment = new ThirdFragment();
                 button1.setEnabled(false);
                 button2.setEnabled(false);
                 break;
         }
+        createFragment(fragment);
     };
 
     private View.OnFocusChangeListener onFocusChangeListener = (View v, boolean isFocused) -> {

@@ -9,12 +9,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class FirstFragment extends Fragment {
+
     private View view;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-
         view = inflater.inflate(R.layout.first_fragment, container, false);
         return view;
     }
