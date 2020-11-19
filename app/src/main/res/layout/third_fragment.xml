@@ -11,20 +11,22 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_margin="36dp"
+        android:backgroundTint="@drawable/button_selector"
         android:text="Button 1"
+        android:textColor="@color/button_text_color"
         />
 
     <EditText
         android:id="@+id/third_fragment_edit_text"
         android:layout_width="600dp"
-        android:maxLines="1"
         android:layout_height="wrap_content"
         android:layout_below="@+id/third_fragment_button_1"
         android:layout_centerHorizontal="true"
-        android:nextFocusUp="@id/third_fragment_button_1"
-        android:nextFocusRight="@id/third_fragment_button_1"
-        android:nextFocusDown="@id/third_fragment_button_2"
         android:hint="text"
+        android:maxLines="1"
+        android:nextFocusRight="@id/third_fragment_button_1"
+        android:nextFocusUp="@id/third_fragment_button_1"
+        android:nextFocusDown="@id/third_fragment_button_2"
         />
 
     <LinearLayout
@@ -36,12 +38,16 @@
         android:layout_marginTop="100dp"
         android:orientation="horizontal"
         >
+
         <Button
             android:id="@+id/third_fragment_button_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:backgroundTint="@drawable/button_selector"
             android:text="Button 2"
+            android:textColor="@color/button_text_color"
+
             />
 
         <Button
@@ -49,7 +55,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:backgroundTint="@drawable/button_selector"
             android:text="Button 3"
+            android:textColor="@color/button_text_color"
             />
 
         <Button
@@ -57,10 +65,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:backgroundTint="@drawable/button_selector"
             android:text="Button 4"
+            android:textColor="@color/button_text_color"
             />
     </LinearLayout>
-
 
 
 </RelativeLayout>
