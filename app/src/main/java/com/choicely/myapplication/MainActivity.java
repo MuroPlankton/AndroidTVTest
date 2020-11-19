@@ -43,55 +43,10 @@ public class MainActivity extends FragmentActivity {
         button1.setOnClickListener(onClickListener);
         button2.setOnClickListener(onClickListener);
         button3.setOnClickListener(onClickListener);
-//        FragmentManager manager = getSupportFragmentManager();
-//        FragmentTransaction transaction = manager.beginTransaction();
-//
-//        FragmentTwo fragmentTwo = new FragmentTwo();
-//
-////        transaction.add(R.id.fragment_container, fragmentTwo);
-//        transaction.replace(R.id.fragment_container, fragmentTwo);
-//        transaction.commit();
-
-
-
-//        button1.setOnClickListener(v -> {
-//            FirstFragment fragment1 = new FirstFragment();
-//
-//            fragment1.setArguments(getIntent().getExtras());
-//
-//            getSupportFragmentManager()
-//                    .beginTransaction()
-//                    .replace(R.id.fragment_container, fragment1)
-//                    .commit();
-//
-//        });
-//        button2.setOnClickListener(v -> {
-//            SecondFragment fragment12 = new SecondFragment();
-//
-//            fragment12.setArguments(getIntent().getExtras());
-//
-//            getSupportFragmentManager()
-//                    .beginTransaction()
-//                    .replace(R.id.fragment_container, fragment12)
-//                    .commit();
-//
-//        });
-//        button3.setOnClickListener(v -> {
-//            ThirdFragment fragment13 = new ThirdFragment();
-//
-//            fragment13.setArguments(getIntent().getExtras());
-//
-//            getSupportFragmentManager()
-//                    .beginTransaction()
-//                    .replace(R.id.fragment_container, fragment13)
-//                    .commit();
-//
-//        });
     }
 
 
-
-    public void createFragment(Fragment fragment){
+    public void createFragment(Fragment fragment) {
 
         fragment.setArguments(getIntent().getExtras());
 
