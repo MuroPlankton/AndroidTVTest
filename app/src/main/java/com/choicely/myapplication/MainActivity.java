@@ -23,10 +23,14 @@ public class MainActivity extends FragmentActivity {
             case R.id.main_activity_fragment_button_2:
                 System.out.println("FRAGMENT 2");
                 createFragment(new SecondFragment());
+                button1.setEnabled(false);
+                button3.setEnabled(false);
                 break;
             case R.id.main_activity_fragment_button_3:
                 System.out.println("Fragment 3");
                 createFragment(new ThirdFragment());
+                button1.setEnabled(false);
+                button2.setEnabled(false);
                 break;
         }
     };
@@ -56,5 +60,4 @@ public class MainActivity extends FragmentActivity {
                 .commit();
 
     }
-
 }

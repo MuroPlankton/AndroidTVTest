@@ -17,6 +17,7 @@ public class SecondFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.second_fragment, container, false);
+        view.requestFocus();
         return view;
     }
 }
