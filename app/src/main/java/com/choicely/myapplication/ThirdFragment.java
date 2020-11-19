@@ -18,4 +18,5 @@ public class ThirdFragment extends Fragment {
         view = inflater.inflate(R.layout.third_fragment, container, false);
         return view;
     }
+
 }
