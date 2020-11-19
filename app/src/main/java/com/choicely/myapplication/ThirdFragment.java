@@ -16,6 +16,7 @@ public class ThirdFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.third_fragment, container, false);
+        view.requestFocus();
         return view;
     }
 
