@@ -23,7 +23,7 @@
             android:layout_weight="1"
             android:backgroundTint="@drawable/button_selector"
             android:text="Fragment 1"
-            android:textColor="@color/button_text_color"
+            android:textColor="@color/button_text_color_selector"
             />
 
         <Button
@@ -34,7 +34,7 @@
             android:layout_weight="1"
             android:backgroundTint="@drawable/button_selector"
             android:text="Fragment 2"
-            android:textColor="@color/button_text_color"
+            android:textColor="@color/button_text_color_selector"
             />
 
         <Button
@@ -45,7 +45,7 @@
             android:layout_weight="1"
             android:backgroundTint="@drawable/button_selector"
             android:text="Fragment 3"
-            android:textColor="@color/button_text_color"
+            android:textColor="@color/button_text_color_selector"
             />
 
     </LinearLayout>

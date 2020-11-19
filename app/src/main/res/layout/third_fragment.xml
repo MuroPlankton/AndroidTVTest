@@ -13,7 +13,7 @@
         android:layout_margin="36dp"
         android:backgroundTint="@drawable/button_selector"
         android:text="Button 1"
-        android:textColor="@color/button_text_color"
+        android:textColor="@color/button_text_color_selector"
         />
 
     <EditText
@@ -46,7 +46,7 @@
             android:layout_margin="16dp"
             android:backgroundTint="@drawable/button_selector"
             android:text="Button 2"
-            android:textColor="@color/button_text_color"
+            android:textColor="@color/button_text_color_selector"
 
             />
 
@@ -57,7 +57,7 @@
             android:layout_margin="16dp"
             android:backgroundTint="@drawable/button_selector"
             android:text="Button 3"
-            android:textColor="@color/button_text_color"
+            android:textColor="@color/button_text_color_selector"
             />
 
         <Button
@@ -67,7 +67,7 @@
             android:layout_margin="16dp"
             android:backgroundTint="@drawable/button_selector"
             android:text="Button 4"
-            android:textColor="@color/button_text_color"
+            android:textColor="@color/button_text_color_selector"
             />
     </LinearLayout>
 
