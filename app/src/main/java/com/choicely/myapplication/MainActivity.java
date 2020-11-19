@@ -35,6 +35,14 @@ public class MainActivity extends FragmentActivity {
         }
     };
 
+    private View.OnFocusChangeListener onFocusChangeListener = (View v, boolean isFocused) -> {
+        if (isFocused) {
+            button1.setEnabled(true);
+            button2.setEnabled(true);
+            button3.setEnabled(true);
+        }
+    };
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +55,10 @@ public class MainActivity extends FragmentActivity {
         button1.setOnClickListener(onClickListener);
         button2.setOnClickListener(onClickListener);
         button3.setOnClickListener(onClickListener);
+
+        button1.setOnFocusChangeListener(onFocusChangeListener);
+        button2.setOnFocusChangeListener(onFocusChangeListener);
+        button3.setOnFocusChangeListener(onFocusChangeListener);
     }
 
 
