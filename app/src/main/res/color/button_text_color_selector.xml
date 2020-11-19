@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_focused="true"
+<<<<<<< HEAD
         android:color="@android:color/black"/> <!-- focused -->
     <item android:color="@android:color/white"/> <!-- default -->
+=======
+        android:color="@color/black"/> <!-- focused -->
+    <item android:color="@color/white"/> <!-- default -->
+>>>>>>> 71d11823e5c60b864ec71407330e129492595b83
 </selector>
